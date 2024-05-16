@@ -1,0 +1,178 @@
+
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        
+  <title>My first VRML97 model - HY821</title>
+  
+  <!-- Required tags -->  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+<!-- using cdn no compiled to avoid file clogging and gaining versitility, but sacrificing speed-->  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+ <!--declaring fonts , the coca cola font is inside the assets/fonts folder--> 
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+  <!--declaring own font from google fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../lab1/assets/css/styles.css">
+
+  <link rel="stylesheet" type="text/css" href="https://www.x3dom.org/download/x3dom.css">
+  <script type="text/javascript" src="https://www.x3dom.org/download/x3dom.js"></script>
+      
+<style>
+  .navbar-brand {
+        color: black;
+        transition: all 0.2s linear;
+    }
+    .navbar-brand:hover
+    {
+        color: white;
+    } 
+    .nav-link {
+        color: black;
+        transition: all 0.2s linear;
+    }
+    .nav-link:hover
+    {
+        color: white;
+    } 
+</style>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid" style="background-color:red">
+              
+                <div class="logo">
+                  <a class="navbar-brand" href="index.html">
+                  <h1>1</h1>
+                  <h1>oca</h1>
+                  <h2>Cola</h2>
+                  <h3>Journey</h3>
+                  <p>Refreshing the world, one story at a time</p>
+                  </a>
+                  </div>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <!-- Navigation bar deployable menu -->
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="vrmltox3d.html">VRML97 to X3D</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="museum.html">Coca Cola Museum</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="Textures.html">Texturization</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="explorer.html">Model explorer</a>
+                  </li>
+                </ul>
+                <span class="nav-link" href="#">
+                  Contact
+                </span>
+              </div>
+            </div>
+        </nav>
+
+          <!--padding after the navmenu-->
+          <div class="container main_contents"></div>
+
+ <!--///////////////////////////////////////////////////////////////////////////////-->
+
+        
+        
+        <style>
+            .content {
+                width: 700px;
+                border: 5px solid gray;
+                background: lightblue;
+                padding: 30px;
+                margin: 20px;
+            }
+    
+            .modelStyle {
+                border: double;
+                width: 500px;
+                background: lightgrey;
+                margin-left: inherit;
+            }
+    
+            .centre {
+                text-align: center;
+            }
+    
+            .p_centre {
+                text-align: center;
+                color: red;
+                font-weight: bold;
+            }
+    
+            .textBox {
+                padding: 10px;
+            }
+        </style>
+    </head>
+    <body>
+      
+        <div class="content mx-auto">
+            <h1 class="centre">VRML to X3D Conversion Workflow Result</h1>
+            <p class="textBox">Convert VRML to X3D using the open source view3dscene Application with the resulting X3D embedded into HTML using X3DOM libraries - X3dom.css and X3dom.js.</p>
+            <div class="modelStyle mx-auto">
+                <x3d width="500px" height="400px">
+                    <scene>
+                        <inline url="assets/X3D/vrmltox3d.x3d"></inline>
+                    </scene>
+                </x3d>
+                <p class="centre">This Coke Can was built in 3ds Max and exported to VRML97</p>
+            </div>
+            <p class="textBox">Should be able to do same using X3D-Edit 4.0.</p>
+        </div>
+
+
+ <!--///////////////////////////////////////////////////////////////////////////////-->
+
+          <!---footer, socials and additional info-->
+          
+          <nav class="navbar fixed-bottom navbar-expand-sm bg-dark navbar-dark footer">
+            <div class="container-fluid">
+              <div class="navbar-text float-left copyright">
+                <p><span class="align-baseline"></span>&copy Mobile Web 3D Applications </span></p>
+              </div>
+              <div class="footerInfo">
+                <ul>
+                  <li class="navbar-text">
+                    <p>2023-2024 - 920G5 Sussex University</p>
+                  </li>            
+                  <li class="navbar-text">
+                    <p>Hongyu Yan - Mr 305</p>
+                  </li>
+                </ul>
+              </div>
+              
+              <div class="navbar-text float-right social">
+                <a href="#"><i class="fab fa-github-square fa-2x" style="font-size: 50px;color: black;"></i></a>
+                <a href="#"><i class="fab fa-google-plus-square fa-2x" style="font-size: 50px;color: red;"></i></a>
+                <a href="#"><i class="fab fa-twitter-square fa-2x" style="font-size: 50px;color: aqua;"></i></a>
+                <a href="#"><i class="fab fa-facebook-square fa-2x" style="font-size: 50px;color: blue;"></i></a>
+              </div>
+            </div>
+          </nav>
+
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+
+
+</html>

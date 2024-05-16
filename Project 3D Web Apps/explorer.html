@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        
+  <title>Model Explorer - HY821</title>
+  
+  <!-- Required tags -->  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+<!-- using cdn no compiled to avoid file clogging and gaining versitility, but sacrificing speed-->  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+ <!--declaring fonts , the coca cola font is inside the assets/fonts folder--> 
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+  <!--declaring own font from google fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../lab1/assets/css/styles.css">
+
+  <link rel="stylesheet" type="text/css" href="https://www.x3dom.org/download/x3dom.css">
+  <script type="text/javascript" src="https://www.x3dom.org/download/x3dom.js"></script>
+      
+<style>
+  .navbar-brand {
+        color: black;
+        transition: all 0.2s linear;
+    }
+    .navbar-brand:hover
+    {
+        color: white;
+    } 
+    .nav-link {
+        color: black;
+        transition: all 0.2s linear;
+    }
+    .nav-link:hover
+    {
+        color: white;
+    } 
+    .texture-button {
+      cursor: pointer;
+      max-width: 260px;
+      max-height: 45px;
+    }
+    
+    x3d{
+      height: 400px;
+    }
+    .texture-button {
+      max-width: 100%;
+      height: auto;
+    }
+    .texture-item {
+      flex: 1 1 30%;
+      display: flex;
+      justify-content:  center;
+      align-items: center;
+      margin-bottom: 10px; 
+    }
+    .texture-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      gap: 10px;
+      padding-bottom: 10px;
+    }
+</style>
+    </head>
+    
+
+    <body>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+          <div class="container-fluid" style="background-color:red">
+            
+              <div class="logo">
+                <a class="navbar-brand" href="index.html">
+                <h1>1</h1>
+                <h1>oca</h1>
+                <h2>Cola</h2>
+                <h3>Journey</h3>
+                <p>Refreshing the world, one story at a time</p>
+                </a>
+                </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <!-- Navigation bar deployable menu -->
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="vrmltox3d.html">VRML97 to X3D</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="museum.html">Coca Cola Museum</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="Textures.html">Texturization</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="explorer.html">Model explorer</a>
+                </li>
+              </ul>
+              <span class="nav-link" href="#">
+                Contact
+              </span>
+            </div>
+          </div>
+        </nav>
+
+        <!--padding after the navmenu-->
+        <div class="container main_contents">
+
+<!--///////////////////////////////////////////////////////////////////////////////-->
+
+
+
+
+<div class="container">
+<div class="row">
+    <!-- Left Section -->
+    <div class="col-md-8">
+        <div class="card mb-4">
+            <div class="card-header">
+                <ul class="nav nav-tabs card-header-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Model Explorer Selection</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="card-body"  style="min-height: 40rem; height: auto;">
+                
+                <div class="mb-3">
+                    <button class="btn btn-success btn-sm" onclick="showModel('assets/X3D/can.x3d')">Can of Soda</button>
+                    <button class="btn btn-success btn-sm" onclick="showModel('assets/X3D/bottlecap.x3d')"> Cap of Bottle</button>
+                    <button class="btn btn-success btn-sm" onclick="showModel('assets/X3D/plasticbottle.x3d')">Plastic Bottle</button>
+                </div>
+
+                <h4 class="card-title">Model</h4>
+
+                    <div class="row">
+                      <!--CAN X3D-->
+                      <div id="model-container">
+                      <x3d >
+                        <scene id="x3dScene" headlight="false">
+                          <inline id="x3dModel" nameSpaceName="model" url="assets/X3D/can.x3d"></inline>
+                        </scene>
+                      </x3d>
+                    </div>
+
+                      <!--CAN X3D-->
+                    </div>
+                    <row>
+                      <p class="card-text">
+                        
+                    </p>
+                      <p class="card-text">
+                        This X3D model of the coke can has been created in 3ds Max, UV mapped and exported to blender for a correct production of the x3d file including the mapping of the textures, X3D for display online, the headlights are turned off when importing.
+                    </p>
+                    <p class="card-text">
+                      The model supports manipulation and zoom in and out, the scene was modified to be black so we can better observe model.
+                  </p>
+                  <p class="card-text">
+                    The model off the bottle does not support translation, nor rotation, because the complexity of the script would increase.
+                </p>
+                    </row>
+                
+            </div>
+        </div>
+    </div>
+    <!-- Right Section -->
+
+    <div class="col-md-4" style="height: auto;">
+        <div class="card" style="height: auto;">
+            <div class="card-header">
+                <ul class="nav nav-tabs card-header-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Effects</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="card-body"  style="min-height: 40rem; height: auto;width: auto;">
+              <h4 class="card-title">Select the effect</h4>
+              <p class="card-text">
+                ROTATION
+              </p>
+                <div id="texture-container" class="texture-container">
+                    <div class="texture-item">
+                      <button class="btn btn-success btn-sm"  class = "texture-button" onclick="startRotation('x')">rotate X</button>
+                    </div>
+                    <div class="texture-item">
+                      <button class="btn btn-success btn-sm" class = "texture-button" onclick="startRotation('y')">rotate Y</button>
+                    </div>
+                    <div class="texture-item">
+                      <button class="btn btn-success btn-sm" class = "texture-button" onclick="startRotation('z')">rotate z</button>
+                  </div>
+                  <div class="texture-item">
+                    <button class="btn btn-success btn-sm" class = "texture-button" onclick="stopRotation()">STOP</button>
+                </div>
+                </div>
+                
+                <p class="card-text">
+                  POSITION
+                </p>
+              <div class="texture-container">
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-primary" onclick="moveModel(-0.1, 0)">Left</button>
+                    <button type="button" class="btn btn-primary" onclick="moveModel(0.1, 0)">Right</button>
+                    <button type="button" class="btn btn-primary" onclick="moveModel(0, 0.1)">Up</button>
+                    <button type="button" class="btn btn-primary" onclick="moveModel(0, -0.1)">Down</button>
+                </div>
+              </div>
+              <p class="card-text">
+                LIGHT AND BACKGROUND
+              </p>
+
+              <div class="texture-container">
+                <div class="btn-group mt-3" role="group">
+                  <button type="button" class="btn btn-secondary" onclick="increaseLightIntensity()">Increase Intensity</button>
+                  <button type="button" class="btn btn-secondary" onclick="decreaseLightIntensity()">Decrease Intensity</button>
+                  <button type="button" class="btn btn-secondary" onclick="changelightColor()">Change Light Color</button>
+              </div>
+            </div>
+            <div class="texture-container">
+            <button type="button" class="btn btn-secondary" onclick="moveLight(0, 0, 0.1)">Move Forward</button>
+            <button type="button" class="btn btn-secondary" onclick="moveLight(0, 0, -0.1)">Move Backward</button>
+          </div>
+            <div class="texture-container">
+              <div class="btn-group mt-3" role="group">
+                <button type="button" class="btn btn-secondary" onclick="moveLight(0, 0.1, 0)">Move Up</button>
+                <button type="button" class="btn btn-secondary" onclick="moveLight(0, -0.1, 0)">Move Down</button>
+                <button type="button" class="btn btn-secondary" onclick="moveLight(-0.1, 0, 0)">Move Left</button>
+                <button type="button" class="btn btn-secondary" onclick="moveLight(0.1, 0, 0)">Move Right</button>
+            </div>
+            </div>
+          
+              
+          
+
+          <div class="texture-container">
+            <button class="btn btn-success btn-sm" class = "texture-button" onclick="changebackgroundColor()">Change Background color</button>
+          </div>
+              
+              
+        </div>
+    </div>
+</div>
+</div>
+
+<!--///////////////////////////////////////////////////////////////////////////////-->
+
+</div>
+
+        <!---footer, socials and additional info-->
+        
+        <nav class="navbar fixed-bottom navbar-expand-sm bg-dark navbar-dark footer">
+          <div class="container-fluid">
+            <div class="navbar-text float-left copyright">
+              <p><span class="align-baseline"></span>&copy Mobile Web 3D Applications </span></p>
+            </div>
+            <div class="footerInfo">
+              <ul>
+                <li class="navbar-text">
+                  <p>2023-2024 - 920G5 Sussex University</p>
+                </li>            
+                <li class="navbar-text">
+                  <p>Hongyu Yan - Mr 305</p>
+                </li>
+              </ul>
+            </div>
+            
+            <div class="navbar-text float-right social">
+              <a href="#"><i class="fab fa-github-square fa-2x" style="font-size: 50px;color: black;"></i></a>
+              <a href="#"><i class="fab fa-google-plus-square fa-2x" style="font-size: 50px;color: red;"></i></a>
+              <a href="#"><i class="fab fa-twitter-square fa-2x" style="font-size: 50px;color: aqua;"></i></a>
+              <a href="#"><i class="fab fa-facebook-square fa-2x" style="font-size: 50px;color: blue;"></i></a>
+            </div>
+          </div>
+        </nav>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+        
+
+        <script>
+
+     let rotationInterval=null;
+
+        /////////////change of gallery exhibition model////////////
+    
+        
+        
+          function showModel(modelUrl) {
+              // Select the model container and existing scene
+              const modelContainer = document.getElementById('model-container');
+             
+              while (modelContainer.firstChild)
+              {modelContainer.removeChild(modelContainer.firstChild);}
+              // Create a new X3D element
+              const x3dElement = document.createElement('X3D');
+              x3dElement.setAttribute('width','500px');
+              // Create a new scene
+              const newScene = document.createElement('scene');
+              newScene.setAttribute('id', 'x3d-scene');
+              newScene.setAttribute('headlight','false');
+              
+              // Create a new inline element with the new model URL
+              const newInline = document.createElement('inline');
+              newInline.setAttribute('nameSpaceName','model');
+              newInline.setAttribute('id', 'x3d-model');
+              newInline.setAttribute('url', modelUrl);
+
+              // Append the new inline element to the new scene
+              newScene.appendChild(newInline);
+
+              // Append the new scene to the X3D element
+              x3dElement.appendChild(newScene);
+
+              // Append the new X3D element to the model container
+              modelContainer.appendChild(x3dElement);
+
+              x3dom.reload()
+
+          };
+
+          function moveModel(dx, dy) {
+            const internalnodeid1 = 'model__model-transform';
+            const modelTransform = document.getElementById(internalnodeid1);
+
+            if (modelTransform) {
+                const currentTranslation = modelTransform.getAttribute('translation').split(' ').map(parseFloat);
+                console.log('Current Translation:', currentTranslation);
+                
+                const newTranslation = [
+                    currentTranslation[0] + dx,
+                    currentTranslation[1] + dy,
+                    currentTranslation[2]
+                ];
+                
+                modelTransform.setAttribute('translation', newTranslation.join(' '));
+            } else {
+                console.log(`${internalnodeid1} not found`);
+            }    
+        }
+
+        function startRotation(axis) {
+             const internalnodeid1 = 'model__model-transform';
+            const modelTransform = document.getElementById(internalnodeid1);
+            if (rotationInterval)
+            {
+              clearInterval(rotationInterval);
+            }
+            if (modelTransform) {
+                rotationInterval = setInterval(() => {
+                    const currentRotation = modelTransform.getAttribute('rotation') || "0 1 0 0";
+                    const [x, y, z, angle] = currentRotation.split(' ').map(parseFloat);
+                    let newRotation;
+
+                    switch(axis) {
+                        case 'x':
+                            newRotation = [1, 0, 0, angle + 0.1];
+                            break;
+                        case 'y':
+                            newRotation = [0, 1, 0, angle + 0.1];
+                            break;
+                        case 'z':
+                            newRotation = [0, 0, 1, angle + 0.1];
+                            break;
+                        default:
+                            newRotation = [x, y, z, angle + 0.1];
+                    }
+                    modelTransform.setAttribute('rotation', newRotation.join(' '));
+                }, 100);
+            }
+        }
+
+        function stopRotation() {
+            clearInterval(rotationInterval);
+            rotationInterval=null;
+        }
+
+        window.moveModel = moveModel;
+        window.startRotation = startRotation;
+        window.stopRotation = stopRotation;
+
+        function increaseLightIntensity() {
+          const internalnodeid1 = 'model__light';
+            const light = document.getElementById(internalnodeid1);
+            if (light) {
+                let intensity = parseFloat(light.getAttribute('intensity'));
+                intensity = Math.min(intensity + 0.1, 1.0); // Max intensity 1.0
+                light.setAttribute('intensity', intensity);
+                console.log('Light intensity increased to', intensity);
+            }
+        }
+
+        function decreaseLightIntensity() {
+            const internalnodeid1 = 'model__light';
+            const light = document.getElementById(internalnodeid1);
+            if (light) {
+                let intensity = parseFloat(light.getAttribute('intensity'));
+                intensity = Math.max(intensity - 0.1, 0.0); // Min intensity 0.0
+                light.setAttribute('intensity', intensity);
+                console.log('Light intensity decreased to', intensity);
+            }
+        }
+
+        function changebackgroundColor() {
+            const internalnodeid1 = 'model__model-background';
+            const background = document.getElementById(internalnodeid1);
+            if (background) {
+                const randomColor = [Math.random(), Math.random(), Math.random()];
+                background.setAttribute('skyColor', randomColor.join(' '));
+                background.setAttribute('groundColor', randomColor.join(' '));
+                console.log('background color changed to', randomColor);
+            }
+        }
+        function changelightColor() {
+            const internalnodeid1 = 'model__light';
+            const light = document.getElementById(internalnodeid1);
+            if (light) {
+                const randomColor = [Math.random(), Math.random(), Math.random()];
+                light.setAttribute('color', randomColor.join(' '));
+                console.log('light color changed to', randomColor);
+            }
+        }
+
+       
+        
+        function moveLight(dx, dy, dz) {
+            const light = document.querySelector('[DEF="pointLight"]');
+            if (light) {
+                const currentLocation = light.getAttribute('location').split(' ').map(parseFloat);
+                const newLocation = [
+                    currentLocation[0] + dx,
+                    currentLocation[1] + dy,
+                    currentLocation[2] + dz
+                ];
+                light.setAttribute('location', newLocation.join(' '));
+                console.log('Light location moved to', newLocation);
+            }
+        }
+        window.increaseLightIntensity = increaseLightIntensity;
+        window.decreaseLightIntensity = decreaseLightIntensity;
+        window.changelightColor = changelightColor;
+        window.moveLight = moveLight;
+
+
+      </script>
+
+        
+  </body>
+
+
+</html>

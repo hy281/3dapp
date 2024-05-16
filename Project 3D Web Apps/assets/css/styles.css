@@ -1,0 +1,196 @@
+@font-face {
+    font-family: cocaColaFont;
+    src: url(../fonts/LOKICOLA.TTF);
+    }
+
+.c-item {
+    height: px;
+}
+
+.c-img {
+
+    height: 30%   ;
+    object-fit:  cover;
+    filter: brightness(0.6);
+}
+
+.lobster-regular {
+        font-family: "Lobster", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+                }
+    p {
+        font-family: 'Open Sans', sans-serif;
+        }
+        h1, h2, h3, h4, h5, h6 {
+        font-family: 'Oswald', sans-serif;
+       
+        }
+
+   .main_contents {
+    margin-top: 10px;
+    margin-bottom: 10px;
+   }
+   @media (min-width: 576px) {   }
+
+
+
+   #main_3d_image {
+    background-image: url(../images/main_3D.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* The div block for the main_3d_image has no vertical size,
+    so we need a height to see the background image */
+    height: 300px;
+    margin-bottom:  10px;
+     }
+
+
+     #main_text {
+     float: left;
+     margin: 5%;
+     width: 90%;
+     display: block;
+     background-color: rgba(255,255,255,0.8);
+     padding: 10px;
+     border-radius: 5px;
+     }
+     #main_text h2 {
+     color: rgba(0,102,153,1);
+     font-size: 20px;
+     margin-top: 0px;
+     margin-bottom: 5px;
+    }
+    #main_text h3 {
+    font-size: 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    }
+    #main_text p {
+    font-size: 12px;
+    margin: 0px;
+    line-height: 1.2;
+    }
+    .logo {
+        margin-top: 3px;
+        
+        }
+        .logo h1 {
+        font-family: cocaColaFont; /* You don't need to repeat this for each
+        media query as it is propagated */
+        font-size: 31px;
+        margin: 0;
+        margin-top: 10px;
+        margin-bottom: 22px;
+        float: left;
+        padding-top: 0px;
+        padding-left: 10px;
+        padding-right:0px;
+        margin-right: -5px;
+        }
+        .logo h2 {
+        font-family: cocaColaFont;
+        font-size: 31px;
+        margin-top: 13px;
+        margin-bottom: 10px;
+        padding-top: 0px;
+        padding-left: 6px;
+        padding-right: 3px;
+        float: left;
+        }
+        .logo h3 {
+        font-family: Lobster;
+        font-size: 15px;
+        margin-top: 22px;
+        margin-bottom: 5px;
+        padding-top: 0px;
+        padding-left: 0px;
+        float: left;
+        }
+        .logo p {
+        font-size: 7px; /* You may have to tweak this to get a good fit */
+        margin-top: 41px; /* You may have to tweak this to get a good fit */
+        margin-bottom: 0px;
+        padding-top: 0px;
+        padding-left: 0px;
+        margin-left: -133px;
+        margin-right: 25px;
+        float: left;
+
+
+        }
+
+
+        
+        @media (max-width: 800px) {
+            /* CSS rule to style the footer */
+            .footer {
+             display: none;
+            
+             .container {
+            padding-left: 10%;
+            text-align: center;}
+            
+            }
+            .col-sm{
+                padding-left: 10%;
+
+            }
+            .threejs-container {
+                width: 50%;
+            }
+            .navbar-text > a {
+             font-size: 10px;
+            margin-bottom: 30px;
+            margin-top: 30px;
+            }
+            .navbar-text > p {
+                color: rgb(255, 255, 255);
+                font-size: 14px;
+                margin-bottom: -10px;
+                margin-top: 0px;
+                padding-top: 0px;
+                text-decoration: none;
+            }
+            .copyright {
+             padding-top: 0px;
+             padding-left: 50px;
+            }
+            .social {
+             padding-top: 7px;
+             padding-right: 50px;
+            }}
+
+    .center {
+border: 5px solid;
+margin: auto;
+width: 50%;
+padding: 10px;
+    }
+
+    #c {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        display: block;
+        z-index: -1;
+
+    }
+
+    .diagram {
+     display: inline-block;
+     width: 5em;
+     height: 3em;
+    }
+    canvas {
+        display: block;
+    }
+
+    .card-body {
+        max-height: 300px;
+        overflow-y: auto;
+    }
+    .spacer {
+        max-height: 500px;
+        overflow-y: auto;
+    }
